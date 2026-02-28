@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresa de Segurança em São José SC | Segurança Patrimonial e Privada</title>
+    <meta name="description" content="Procurando empresa de segurança em São José SC? A SCHMITT é líder em segurança patrimonial em São José SC, empresa de vigilância São José SC e segurança privada em São José SC. Especialistas em segurança para condomínios em São José SC." />
+    <meta name="keywords" content="empresa de segurança em São José SC, segurança patrimonial em São José SC, empresa de vigilância São José SC, segurança privada em São José SC, segurança para condomínios em São José SC, segurança privada São José SC" />
+    <link rel="canonical" href="https://example.com/" />
+    
+    <!-- Schema Markup -->
+    <script id="local-business-schema" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SCHMITT – Vigilância Patrimonial e Segurança",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua João Paulo Gaspar, 2702 – Pedregal",
+        "addressLocality": "São José",
+        "addressRegion": "SC",
+        "postalCode": "88113-311",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.5969,
+        "longitude": -48.6189
+      },
+      "url": "https://example.com/",
+      "telephone": "+5548984868277",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "areaServed": [
+        "São José",
+        "Florianópolis",
+        "Palhoça",
+        "Biguaçu",
+        "Grande Florianópolis"
+      ]
+    }
+    </script>
+    <script type="module">
+      (() => {
+        const configuredSiteUrl = import.meta.env.VITE_SITE_URL;
+        const siteUrl =
+          configuredSiteUrl
+            ? `${configuredSiteUrl.replace(/\/+$/, '')}/`
+            : `${window.location.origin}/`;
+
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+          canonical.setAttribute('href', siteUrl);
+        }
+
+        const schemaElement = document.getElementById('local-business-schema');
+        if (!schemaElement) return;
+
+        try {
+          const schema = JSON.parse(schemaElement.textContent || '{}');
+          schema.url = siteUrl;
+          schemaElement.textContent = JSON.stringify(schema);
+        } catch {
+          // Ignore invalid schema JSON and keep the fallback output.
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
